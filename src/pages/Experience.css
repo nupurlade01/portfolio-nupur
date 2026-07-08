@@ -1,0 +1,212 @@
+/* Cleaned up experience-page and back-link classes to avoid conflicts */
+
+/* Custom page-subtitle styles to match Skills page subtitle spacing and font */
+.page-subtitle {
+  font-family: 'Courier New', monospace;
+  font-size: 13px;
+  color: #94a3b8;
+  margin-top: 4px;
+  margin-bottom: 2rem;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+}
+
+[data-theme="dark"] .page-subtitle {
+  color: #475569;
+}
+
+/* -------------------------------- EXPERIENCE STYLES -------------------------------- */
+.exp-timeline {
+  position: relative;
+  padding-left: 52px;
+  margin-top: 2rem;
+}
+
+.exp-timeline::before {
+  content: '';
+  position: absolute;
+  left: 20px;
+  top: 0; bottom: 0;
+  width: 1px;
+  background: #6366f1;
+  opacity: 0.35;
+}
+
+.exp-dot {
+  position: absolute;
+  left: -42px;
+  top: 24px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 2px solid #6366f1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.exp-dot::after {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #6366f1;
+}
+
+/* Card */
+.exp-card {
+  background: #161b22;
+  border: 1px solid #1e293b;
+  border-radius: 14px;
+  padding: 1.75rem 2rem;
+  transition: border-color .2s, background .2s;
+}
+
+.exp-card:hover {
+  border-color: rgba(99,102,241,0.4);
+  background: rgba(99,102,241,0.04);
+}
+
+[data-theme="light"] .exp-card {
+  background: #ffffff;
+  border-color: #e2e8f0;
+}
+
+[data-theme="light"] .exp-card:hover {
+  border-color: rgba(99,102,241,0.3);
+  background: rgba(99,102,241,0.03);
+}
+
+/* Card Header */
+.exp-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1.25rem;
+}
+
+.exp-role {
+  font-size: 17px;
+  font-weight: 700;
+  color: #e2e8f0;
+}
+
+[data-theme="light"] .exp-role {
+  color: #0f172a;
+}
+
+.exp-org {
+  font-size: 14px;
+  color: #6366f1;
+  margin-top: 3px;
+  font-weight: 600;
+}
+
+.exp-date, .exp-location {
+  font-size: 13px;
+  font-family: 'Courier New', monospace;
+  text-align: right;
+  color: #475569;
+}
+
+[data-theme="light"] .exp-date,
+[data-theme="light"] .exp-location {
+  color: #64748b;
+}
+
+/* Bullets */
+.exp-bullets {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.exp-bullets li {
+  font-size: 13px;
+  line-height: 1.65;
+  padding-left: 1.25rem;
+  position: relative;
+  color: #94a3b8;
+}
+
+[data-theme="light"] .exp-bullets li {
+  color: #475569;
+}
+
+.exp-bullets li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: #6366f1;
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+/* Eyebrow & Titles */
+/* Unused title selectors removed */
+
+.exp-eyebrow {
+  font-family: 'Courier New', monospace;
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  text-transform: lowercase;    /* change from uppercase to lowercase */
+  color: #475569;               /* same muted grey as subtitle */
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: .6rem;
+}
+
+.exp-eyebrow::before {
+  display: none;
+}
+
+.exp-main-title {
+  font-family: 'Courier New', monospace;
+  font-size: 13px;              /* same size as back to home */
+  font-weight: 400;             /* not bold */
+  color: #475569;               /* same muted color */
+  margin-top: 4px;
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+[data-theme="dark"] .exp-main-title {
+  color: #475569;
+}
+
+/* Skill Tags Container */
+.exp-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+/* Individual Tag Badge */
+.exp-tag {
+  font-size: 11px;
+  font-family: var(--font-main), sans-serif;
+  font-weight: 500;
+  padding: 4px 10px;
+  border-radius: 12px;
+  line-height: 1.2;
+  transition: all var(--transition-fast);
+  cursor: default; /* decorative, not a button */
+  
+  /* Dark mode default - subtle blue/indigo pill */
+  background: rgba(99, 102, 241, 0.1);
+  color: #a5b4fc;
+  border: 1px solid rgba(99, 102, 241, 0.2);
+}
+
+/* Light mode override */
+[data-theme="light"] .exp-tag {
+  background: #e0e7ff; /* very light blue/indigo */
+  color: #4f46e5;
+  border: 1px solid rgba(79, 70, 229, 0.15);
+}
+
