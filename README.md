@@ -13,7 +13,7 @@ A sleek, premium, and fully responsive personal portfolio website showcasing AI/
 ## 🔗 Live Demo
 
 You can explore the live deployment of the website here:
-👉 **[https://your-portfolio.vercel.app](https://portfolio-nupur.vercel.app)**  
+👉 **[https://portfolio-nupur.vercel.app](https://portfolio-nupur.vercel.app)**  
 
 
 ---
