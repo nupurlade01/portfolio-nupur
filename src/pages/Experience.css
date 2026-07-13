@@ -210,3 +210,35 @@
   border: 1px solid rgba(79, 70, 229, 0.15);
 }
 
+@media (max-width: 768px) {
+  .exp-timeline {
+    padding-left: 32px !important;
+  }
+  .exp-timeline::before {
+    left: 12px !important;
+  }
+  .exp-dot {
+    left: -28px !important;
+    top: 20px !important;
+    width: 16px !important;
+    height: 16px !important;
+  }
+  .exp-dot::after {
+    width: 6px !important;
+    height: 6px !important;
+  }
+  .exp-card {
+    padding: 1.25rem 1rem !important;
+  }
+  .exp-card-header {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 0.5rem !important;
+  }
+  .exp-date, .exp-location {
+    text-align: left !important;
+    font-size: 12px !important;
+  }
+}
+
+

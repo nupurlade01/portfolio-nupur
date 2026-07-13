@@ -1392,4 +1392,230 @@ html[data-theme='dark'] .status-accepted {
   box-shadow: 0 8px 32px rgba(59, 130, 246, 0.08) !important;
 }
 
+/* Mobile Responsiveness Improvements */
+@media (max-width: 768px) {
+  html, body {
+    overflow-x: hidden;
+    width: 100%;
+  }
+
+  .container {
+    padding: 0 16px !important;
+  }
+
+  .section {
+    padding: 40px 0 30px 0 !important;
+  }
+
+  /* Make sure all body text is readable (min 14px) */
+  p, 
+  .about-text, 
+  .project-desc, 
+  .research-desc, 
+  .card-short-desc,
+  .exp-bullets li,
+  .timeline-desc,
+  .resume-fallback-text,
+  .lc-badge-name {
+    font-size: 14px !important;
+  }
+
+  /* Navbar Mobile Layout */
+  .navbar {
+    height: 70px !important;
+  }
+
+  .nav-menu {
+    display: none !important;
+  }
+
+  .nav-toggle {
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    width: 44px;
+    height: 44px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 101;
+  }
+
+  .nav-toggle span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background-color: var(--text-primary);
+    border-radius: 2px;
+    transition: transform var(--transition-normal), opacity var(--transition-normal);
+  }
+
+  /* Animate to 'X' */
+  .nav-toggle.open span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+
+  .nav-toggle.open span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .nav-toggle.open span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+
+  .nav-mobile {
+    display: none;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background-color: var(--bg-mobile-menu);
+    border-bottom: 1px solid var(--border-color);
+    flex-direction: column;
+    padding: 1rem 0;
+    list-style: none;
+    z-index: 99;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  }
+
+  html[data-theme='dark'] .nav-mobile {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  }
+
+  .nav-mobile.open {
+    display: flex !important;
+  }
+
+  .nav-mobile li {
+    width: 100%;
+  }
+
+  .nav-mobile .nav-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 48px;
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    text-transform: lowercase;
+  }
+
+  .nav-mobile .nav-link:hover,
+  .nav-mobile .nav-link.active {
+    color: var(--clr-accent);
+    background-color: var(--bg-secondary);
+  }
+
+  /* Hero Section mobile adjustments */
+  .hero-wrapper {
+    padding-top: 20px !important;
+  }
+
+  .hero-title {
+    font-size: clamp(1.8rem, 7vw, 2.3rem) !important;
+    line-height: 1.3 !important;
+  }
+
+  .hero-tagline {
+    font-size: 0.9rem !important;
+    margin-bottom: 1.25rem !important;
+    padding: 0 8px;
+  }
+
+  .hero-ctas {
+    flex-direction: column !important;
+    width: 100% !important;
+    gap: 0.8rem !important;
+  }
+
+  .hero-ctas > * {
+    width: 100% !important;
+    display: flex !important;
+    justify-content: center !important;
+  }
+
+  .hero-ctas .btn {
+    width: 100% !important;
+    justify-content: center !important;
+  }
+
+  .hero-socials {
+    width: 100% !important;
+    justify-content: center !important;
+    gap: 0.8rem !important;
+  }
+
+  .hero-socials > * {
+    flex: 1 1 auto !important;
+    max-width: none !important;
+  }
+
+  .hero-social-link {
+    width: 100% !important;
+    justify-content: center !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Cards responsiveness */
+  .project-card, .research-card, .stat-card {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .project-card {
+    padding: 1.5rem !important;
+  }
+
+  /* Drawer / details placeholder overrides if any exist */
+  .drawer-content, .project-details, .details-drawer {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 1.25rem !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Resume Page */
+  .resume-pdf-iframe {
+    width: 100% !important;
+    height: 500px !important;
+    -webkit-overflow-scrolling: touch !important;
+  }
+
+  .resume-download-btn {
+    width: 100% !important;
+    justify-content: center !important;
+  }
+
+  /* Back to home spacing */
+  .back-link-container {
+    padding-top: 2rem !important;
+    margin-bottom: -1rem !important;
+  }
+
+  /* Stats grid alignment */
+  .stats-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* Tablet Responsiveness Improvements */
+@media (max-width: 1024px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+
 
